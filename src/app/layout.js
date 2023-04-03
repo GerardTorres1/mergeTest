@@ -8,7 +8,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href="/favicon.ico" />
+        <title>{metadata.title}</title>
+        {/* Para no perder tiempo con los estilos usare Bootstrap */}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" crossOrigin="anonymous" />
+      </head>
+      <body>
+        <header>
+
+        </header>
+        {/* Script CDN Boostrap */}
+        {children}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" crossOrigin="anonymous"></script>
+      </body>
     </html>
   )
 }
