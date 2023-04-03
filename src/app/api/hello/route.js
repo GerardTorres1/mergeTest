@@ -1,3 +1,3 @@
 export async function GET(request) {
-  return new Response('Hello, Next.js! esto generara conflicto')
+  return new Response('Hello, Next.js! como esta todo por allá?')
 }
